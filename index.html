@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FurniFast | Doncaster & Sheffield Moving Services</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+          --primary: #d12c0f; /* Amber for energy/transport */
+            --secondary: #2C3E50; /* Dark Blue for trust */
+            --light: #f4f4f4;
+            --text: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text);
+        }
+
+        /* Header */
+        header {
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        #hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1600518464441-9154a4dea21b?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        #hero span {
+            color: var(--primary);
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 10px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #e07b00;
+        }
+
+        /* About Section */
+        #about, #rates, #contact {
+            padding: 60px 0;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .col {
+            flex: 1;
+            min-width: 300px;
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* Rates Section */
+        #rates {
+            background-color: var(--secondary);
+            color: white;
+        }
+
+        .rate-card {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid var(--primary);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .price-highlight {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .negotiate-badge {
+            background: var(--primary);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* Booking Form */
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Fixes padding issues */
+        }
+
+        /* Confirmation Modal/Page Area */
+        #confirmation {
+            display: none; /* Hidden by default */
+            text-align: center;
+            padding: 50px;
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        #confirmation h2 {
+            color: #2e7d32;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media(max-width: 768px) {
+            #hero h1 { font-size: 2rem; }
+            nav ul { display: none; } /* Simplified mobile view */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">FurniFast</div>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#rates">Rates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#book" class="btn" style="margin-top:0; padding: 5px 15px;">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <h1>Reliable Moves in <span>Doncaster & Sheffield</span></h1>
+        <p>Household goods, white goods, and furniture moved nationwide.</p>
+        <p>LWB & SWB Vans Available.</p>
+        <a href="#book" class="btn">Get a Quote</a>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 style="text-align: center;">Who We Are</h2>
+            <div class="flex-row">
+                <div class="col">
+                    <h3>Two Hardworking Guys</h3>
+                    <p>We are a small, independent team of two running a straightforward business. We aren't a faceless corporation; when you call us, you talk to the people moving your stuff.</p>
+                    <p>We pride ourselves on hard work and reliability. Whether it's a single sofa or a full flat move, we treat your items with care.</p>
+                </div>
+                <div class="col">
+                    <h3>Our Fleet</h3>
+                    <ul>
+                        <li><strong>Long Wheel Base (LWB) Van:</strong> Perfect for larger furniture, white goods, and partial house moves.</li>
+                        <li><strong>Short Wheel Base (SWB) Van:</strong> Ideal for single items, boxes, and tight city access.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rates">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Simple, Transparent Pricing</h2>
+            
+            <div class="rate-card">
+                <h3>Base Rate</h3>
+                <p>£10 for the first mile.</p>
+                <p>+ £5 for every subsequent mile.</p>
+                <p><em>Example: A 10-mile trip would be £10 + (£5 x 9) = £55.</em></p>
+            </div>
+
+            <div class="rate-card">
+                <h3>Booking Deposit</h3>
+                <p class="price-highlight">£5.00</p>
+                <p>To secure your slot. <small>Non-refundable if cancelled on the day of the move.</small></p>
+            </div>
+
+            <div class="rate-card">
+                <h3>Large Items (White Goods)</h3>
+                <p>Large white goods (Fridge Freezers, Washing Machines) may incur an extra value charge depending on weight and equipment required (trolleys/straps).</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 30px;">
+                <p class="negotiate-badge">Prices Negotiable!</p>
+                <p>We are two hardworking people running a small business. We understand everyone has a budget—talk to us, and let's work something out.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 style="text-align: center;">Book Your Move</h2>
+            
+            <div class="flex-row">
+                <div class="col">
+                    <h3>Contact Info</h3>
+                    <p><strong>Phone:</strong> 07700 900000 (Place your number here)</p>
+                    <p><strong>Email:</strong> bookings@furnifast.co.uk</p>
+                    <p><strong>Base:</strong> Operating around Doncaster & Sheffield, delivering UK-wide.</p>
+                    <hr>
+                    <p><em>Need a custom quote? Give us a ring!</em></p>
+                </div>
+
+                <div class="col" id="book">
+                    <h3>Request a Slot</h3>
+                    <form id="bookingForm" onsubmit="handleBooking(event)">
+                        <label>Name</label>
+                        <input type="text" id="name" required placeholder="Your Name">
+
+                        <label>Pickup Location</label>
+                        <input type="text" id="pickup" required placeholder="e.g. Doncaster Centre">
+
+                        <label>Drop-off Location</label>
+                        <input type="text" id="dropoff" required placeholder="e.g. Sheffield S1">
+
+                        <div class="flex-row" style="gap: 10px;">
+                            <div style="flex:1;">
+                                <label>Date</label>
+                                <input type="date" id="date" required>
+                            </div>
+                            <div style="flex:1;">
+                                <label>Time</label>
+                                <input type="time" id="time" required>
+                            </div>
+                        </div>
+
+                        <label>Van Preference</label>
+                        <select id="van">
+                            <option value="Either">Either (Whatever fits)</option>
+                            <option value="SWB">Short Wheel Base</option>
+                            <option value="LWB">Long Wheel Base</option>
+                        </select>
+
+                        <label>Items / Notes</label>
+                        <textarea id="notes" rows="4" placeholder="List large items here (e.g., American fridge freezer)"></textarea>
+
+                        <button type="submit" class="btn" style="width: 100%;">Confirm Booking Request</button>
+                    </form>
+
+                    <div id="confirmation">
+                        <h2>Booking Received!</h2>
+                        <p>Thank you, <span id="confName"></span>.</p>
+                        <p>We have reserved your slot for:</p>
+                        <h3 id="confDate"></h3>
+                        <h3 id="confTime"></h3>
+                        <hr>
+                        <p><strong>Next Steps:</strong></p>
+                        <p>1. We will call you shortly to confirm the mileage calculation.</p>
+                        <p>2. The £5 booking deposit link will be sent via SMS.</p>
+                        <br>
+                        <button class="btn" onclick="resetForm()">Book Another</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 FurniFast. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function handleBooking(event) {
+            event.preventDefault(); // Stop page refresh
+
+            // Get values
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            // Set confirmation values
+            document.getElementById('confName').innerText = name;
+            document.getElementById('confDate').innerText = new Date(date).toDateString();
+            document.getElementById('confTime').innerText = time;
+
+            // Hide form, show confirmation
+            document.getElementById('bookingForm').style.display = 'none';
+            document.getElementById('confirmation').style.display = 'block';
+            
+            // In a real app, you would send this data to a server/email here.
+        }
+
+        function resetForm() {
+            document.getElementById('bookingForm').reset();
+            document.getElementById('bookingForm').style.display = 'block';
+            document.getElementById('confirmation').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
